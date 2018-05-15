@@ -84,5 +84,22 @@ class UserController extends Controller {
     $user->api_token = '';
     $user->save();
     return response()->json(['message' => 'Logged Out'], 200);
+	}
+	
+  public function updateImage(Request $request) {
+    $user = $request->user('api');
+    $data = $request->all();
+    $validator = Validator::make($data, [
+        'image' => 'required|image'
+    ]);
+
+    if(!$validator->fails()){
+      $img = $request->file('image')->store('images');;
+      $user->image = $img;
+      $user->save();
+      return response()->json(['message' => 'Image updated'], 200);
+    } else {
+      return response()->json(['message' => 'Error'], 403);
+    }
   }
 }

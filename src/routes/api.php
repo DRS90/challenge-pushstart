@@ -13,13 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
+
 Route::prefix('users')->middleware('api')->group(function(){
     Route::post('/', 'UserController@login');
+    Route::post('/new', 'UserController@new');
 });
 
 Route::prefix('users')->middleware('auth:api')->group(function(){
     Route::get('/', 'UserController@get');
-    Route::post('/new', 'UserController@new');
     Route::put('/', 'UserController@put');
     Route::post('/image', 'UserController@updateImage');
     Route::delete('/', 'UserController@logout');
