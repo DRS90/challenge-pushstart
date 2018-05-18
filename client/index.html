@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Challenge</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body class='backgroundImage'>
+  <div class='attacher'>
+    <div class='form'>
+      <form method="post" action="home.html">
+        <input name="email"
+          type="text"
+          data-js="emailInput"
+          placeholder="Email"
+          required
+        />
+        <input name="password"
+          type="password"
+          data-js="loginPasswordInput"
+          placeholder="Password"
+          required
+        />
+        <button class='loginButton' data-js="loginButton">Login</button>
+      </form>
+    </div>
+    <div class='form'>
+      <form method="post" action="home.html">
+        <input name="name"
+          type="text"
+          data-js="registerNameInput"
+          placeholder="Name"
+          required
+        />
+        <input name="email"
+          type="text"
+          data-js="registerEmailInput"
+          placeholder="Email"
+          required
+        />
+        <input name="password"
+          type="password"
+          data-js="registerPasswordInput"
+          placeholder="Password"
+          required
+        />
+        <button class='registerButton' data-js='registerButton'>Register</button>
+      </form>
+    </div>
+  </div>
+  <script src="./JS/apiMethods.js"></script>
+  <script src="./JS/index.js"></script>
+</body>
+
+</html>

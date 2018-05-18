@@ -1,0 +1,97 @@
+/* General */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/ps1.png");
+  animation: slide 75s linear infinite;
+}
+
+@keyframes slide {
+  from { background-position: 0 0; }
+  to { background-position: -70% 100%; }
+}
+
+button {
+  border: none;
+  width: 17rem;
+  height: 40px;
+  border-radius: 20px;
+  margin: 0px 20px 20px;
+}
+
+
+input {
+  margin: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+input:focus{
+  border-bottom: 2px solid rgb(3, 149, 185);
+}
+
+input::placeholder {
+  color: rgb(157, 183, 187)
+}
+
+/* Form */
+
+.attacher {
+  margin: 10vw;
+  display : flex;
+  justify-content: center;
+}
+
+@media (max-width:768px) {
+  .attacher {
+    flex-direction: column;
+  }
+}
+
+.form {
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.5), 0 2px 4px rgba(0,0,0,.5);
+  background: #ebf0f3;
+  margin: 1.5rem;
+  display: inline-block;
+}
+
+
+.form input {
+  margin: 20px;
+  display: block;
+  width: 250px;
+  height: 30px;
+}
+
+.loginButton{
+  background: none;
+  border-color: rgb(3, 149, 185);
+  border-style: solid;
+  border-width: 3px;
+  color: rgb(3, 149, 185);
+  font-weight: 700;
+}
+
+.registerButton {
+  background: rgb(3, 149, 185);
+  color: white;
+  font-weight: 700;
+}
+
+.loginButton:hover {
+  box-shadow: inset 17rem 1px rgba(3, 149, 185, 0.212);
+}
+.registerButton:hover {
+  box-shadow: inset 17rem 1px rgba(1, 53, 66, 0.308);
+}
+
+

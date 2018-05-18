@@ -81,7 +81,7 @@ class UserController extends Controller {
 
   public function logout(Request $request) {
     $user = $request->user('api');
-    $user->api_token = '';
+    $user->api_token = NULL;
     $user->save();
     return response()->json(['message' => 'Logged Out'], 200);
 	}
