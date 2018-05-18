@@ -12,10 +12,10 @@
 <body class='backgroundImage'>
   <div class='attacher'>
     <div class='form'>
-      <form method="post" action="home.html">
+      <form method="post">
         <input name="email"
           type="text"
-          data-js="emailInput"
+          data-js="loginEmailInput"
           placeholder="Email"
           required
         />
@@ -25,11 +25,15 @@
           placeholder="Password"
           required
         />
-        <button class='loginButton' data-js="loginButton">Login</button>
+        <button
+          type='submit'
+          class='loginButton'
+          data-js="loginButton">
+          LoginForm</button>
       </form>
     </div>
     <div class='form'>
-      <form method="post" action="home.html">
+      <form method="post">
         <input name="name"
           type="text"
           data-js="registerNameInput"
@@ -48,7 +52,11 @@
           placeholder="Password"
           required
         />
-        <button class='registerButton' data-js='registerButton'>Register</button>
+        <button
+          type='submit'
+          data-js='registerButton'
+          class='registerButton'>
+          RegisterForm</button>
       </form>
     </div>
   </div>

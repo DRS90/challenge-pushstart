@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Challenge2</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+  <div class='attacher'>
+    <div class='user'>
+      <label>
+        <input type='file' data-js='editImage'>
+        <img
+          data-js='userImage'
+          class='image'
+          alt='user image'
+        />
+      </label>
+      <h1 data-js='userName'></h1>
+      <button
+        data-js='userEditButton'
+        class=''>
+      Edit Profile</button>
+      <button
+        data-js='logoutButton'
+        class=''>
+      Logout</button>
+    </div>
+    <div class='edit form'>
+      <form method="post">
+        <h1>Edit</h1>
+        <input name='name'
+          data-js='editName'
+          placeholder="Name"
+          required
+        />
+        <input name='email'
+          data-js='editEmail'
+          placeholder="Email"
+          required
+        />
+        <input name='password'
+          data-js='editPassword'
+          placeholder="Password"
+          type='password'
+          required
+        />
+        <button type='submit'
+          data-js='editConfirmButton'
+          class=''>
+          Confirm</button>
+        <button
+          data-js='editCancelButton'
+          class=''>
+        Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script src='./JS/apiMethods.js'></script>
+  <script src='./JS/home.js'></script>
+</body>
+
+</html>
