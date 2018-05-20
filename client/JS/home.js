@@ -2,7 +2,6 @@
 if (!window.localStorage.token)
   window.location.replace('index.html')
 
-
 const editDiv = document.querySelector('.edit')
 const editImg = document.querySelector("[data-js='editImage']")
 
@@ -37,14 +36,13 @@ function initEventListeners() {
   User.logoutButton.addEventListener('click', logout)
   editImg.addEventListener('change', (e) => {
     if (e)
-      console.log(e)
+      swapImage(e)
   })
 }
 
 async function init() {
   const userData = await getUserData()
-  //User.image.src = !!userData.image ? userData.imagem : './testes/default.jpg'
-  User.image.src = './testes/default.jpg'
+  User.image.src = !!userData.image ? userData.imagem : './img/default.jpg'
 
   User.name.textContent = userData.name
   EditScreenForm.name.value = userData.name

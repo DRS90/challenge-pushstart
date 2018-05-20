@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('email');
             $table->string('image')->nullable();
             $table->string('api_token')->nullable();
+
+            $table->unique([DB::raw('email(191)')]);
         });
     }
 

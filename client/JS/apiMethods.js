@@ -45,7 +45,7 @@ async function edit(e) {
 async function logout(e) {
   e.preventDefault()
   const response = await getResponse(url, 'delete')
-  if (response.ok){
+  if (response.ok) {
     window.localStorage.clear()
     window.location.replace('index.html')
   }
@@ -77,3 +77,32 @@ async function register(e) {
     console.log(error)
   }
 }
+
+function swapImage(e) {
+  var reader = new FileReader();
+
+  reader.onload = function (e) {
+    User.image.src = e.target.result
+  }
+  reader.readAsDataURL(e.target.files[0])
+  console.log('Troca aqui mas não no banco :(')
+}
+
+/* Tentativas de trocar imagem no banco
+  async function editImage(e, reader) {
+    //e.preventDefault()
+    let image = e.target.files[0]
+    //const image = reader.result
+    const response = await fetch(
+      url + '/image', {
+        method: 'post',
+        body: image,
+        headers: {
+          'Authorization': 'Bearer ' + token,
+          //'Accept': 'multipart/form-data',
+          //'Content-Type': 'multipart/form-data'
+        }
+      })
+    //window.location.reload()
+  }
+*/

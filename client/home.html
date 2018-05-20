@@ -12,23 +12,23 @@
 <body>
   <div class='attacher'>
     <div class='user'>
+
       <label>
-        <input type='file' data-js='editImage'>
-        <img
+          <img
           data-js='userImage'
           class='image'
           alt='user image'
         />
+        <input type='file' data-js='editImage'>
+        <div class='effect'>Click to change</div>
       </label>
       <h1 data-js='userName'></h1>
-      <button
-        data-js='userEditButton'
-        class=''>
-      Edit Profile</button>
-      <button
-        data-js='logoutButton'
-        class=''>
-      Logout</button>
+      <button data-js='userEditButton'>
+        Edit Profile
+      </button>
+      <button data-js='logoutButton'>
+        Logout
+      </button>
     </div>
     <div class='edit form'>
       <form method="post">
@@ -51,11 +51,11 @@
         />
         <button type='submit'
           data-js='editConfirmButton'
-          class=''>
+          class='confirmButton'>
           Confirm</button>
         <button
           data-js='editCancelButton'
-          class=''>
+          class='cancelButton'>
         Cancel</button>
       </form>
     </div>
